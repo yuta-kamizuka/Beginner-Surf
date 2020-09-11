@@ -1,24 +1,32 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Beginner-Surf DB設計
 
-Things you may want to cover:
+##  usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|emil|string|null: false|
+|password|string|null: false|
+### Association
+- has_many :messages
+- has_many :groups_users
+- has_many :groups,  through:  :groups_users
 
-* Ruby version
+##  groups
+|Column|Type|Options|
+|------|----|-------|
 
-* System dependencies
+### Association
 
-* Configuration
+##  messages
+|Column|Type|Options|
+|------|----|-------|
 
-* Database creation
+### Association
 
-* Database initialization
+##  users_groups
+|Column|Type|Options|
+|------|----|-------|
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Association
